@@ -1,0 +1,24 @@
+
+import Foundation
+
+// MARK: - Welcome
+struct Welcome: Codable {
+    let photos: Photos
+    let stat: String
+}
+
+// MARK: - Photos
+struct Photos: Codable {
+    let page, pages, perpage, total: Int
+    let photo: [Photo]
+}
+
+// MARK: - Photo
+struct Photo: Codable {
+    let id, owner, secret, server: String
+    let farm: Int
+    let title: String
+    let ispublic, isfriend, isfamily: Int
+}
+
+https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=9ca0b973fa0f04e52d234980c04bf080&text=car&format=json&nojsoncallback=1
